@@ -4,11 +4,12 @@
 
 ### eboot.bin needs to be unfselfed and to do this [pip](https://github.com/RyzenDew/rpcsx/edit/usage-changes/.github/BUILDING.md#we-need-one-more-thing) is required with this tool [ps4_unfself](https://github.com/SocraticBliss/ps4_unfself)
 
-Place ```ps4_unfself.py``` into the same folder as the eboot.bin then open a console and type 
+Place ```ps4_unfself.py``` into the same folder as the eboot.bin then open a console and type the following:
 
-```
+```sh
 python ps4_unfself.py eboot.bin
 ```
+
 You will get a read out and it will make an ```eboot.elf```
 
 ## How to run samples and games
@@ -25,13 +26,13 @@ rm -f /dev/shm/rpcsx-* && ./rpcsx-os --mount  "<path to fw>/system" "/system" --
 
 ## Creating a log
 
-### You can use this flag if you encountered a segfault for debugging purposes.
+### You can use this flag if you encountered a segfault for debugging purposes
 
 ```sh
 --trace
 ```
 
-### You can redirect all log messages to a file by appending this command:
+### You can redirect all log messages to a file by appending this to the command
 
 ```sh
 &>log.txt
